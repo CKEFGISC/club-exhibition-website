@@ -1,0 +1,9 @@
+{
+  "short_name": "2024 CKEFGISC Exhibition",
+  "name": "2024 CKEFGISC Exhibition",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#eaeaea",
+  "background_color": "#0d0d0d"
+}
