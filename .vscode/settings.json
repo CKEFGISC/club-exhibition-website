@@ -2,5 +2,6 @@
   "compile-hero.disable-compile-files-on-did-save-code": false,
   "compile-hero.javascript-output-toggle": true,
   "compile-hero.typescript-output-toggle": true,
-  "compile-hero.typescriptx-output-toggle": false
+  "compile-hero.typescriptx-output-toggle": false,
+  "typescript.preferences.importModuleSpecifierEnding": "js"
 }
