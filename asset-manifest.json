@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.9a6d1f18.css",
-    "main.js": "/static/js/main.a29963f5.js",
-    "index.html": "/index.html",
-    "main.9a6d1f18.css.map": "/static/css/main.9a6d1f18.css.map",
-    "main.a29963f5.js.map": "/static/js/main.a29963f5.js.map"
+    "main.css": "/club-exhibition-website/static/css/main.9a6d1f18.css",
+    "main.js": "/club-exhibition-website/static/js/main.a29963f5.js",
+    "index.html": "/club-exhibition-website/index.html",
+    "main.9a6d1f18.css.map": "/club-exhibition-website/static/css/main.9a6d1f18.css.map",
+    "main.a29963f5.js.map": "/club-exhibition-website/static/js/main.a29963f5.js.map"
   },
   "entrypoints": [
     "static/css/main.9a6d1f18.css",
