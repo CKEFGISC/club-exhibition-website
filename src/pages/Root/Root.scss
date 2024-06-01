@@ -155,3 +155,27 @@ $timeline-dot-size: 12px;
     opacity: 0.6;
   }  
 }
+
+.map-table {
+  border-width: 0;
+  font-size: 1.2em;
+  --bs-table-bg: #{$c-background-11};
+
+  td.header {
+    padding: 28px;
+    text-align: center;
+  }
+  
+  td {
+    width: 100dvw; /* Let Bootstrap decide */
+    height: 56px;
+
+    > div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

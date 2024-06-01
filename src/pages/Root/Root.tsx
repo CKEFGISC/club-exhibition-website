@@ -1,7 +1,7 @@
 import React from "react";
 import PageFrame from "../../utils/components/PageFrame.tsx";
 import "./Root.scss";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Table } from "react-bootstrap";
 
 export default function Root() {
   React.useEffect(() => {
@@ -26,23 +26,23 @@ export default function Root() {
     window.addEventListener("scroll", handleBackgroundPos);
   }, []);
 
-  interface EventData { 
-    time: number, 
-    id: string 
+  interface EventData {
+    time: number,
+    id: string
   }
 
   const events: Array<EventData> = [
-    { time: 10,      id: "intro" },
-    { time: 10.5,    id: "A" },
-    { time: 11,      id: "activity" },
-    { time: 11.5,    id: "B" },
-    { time: 12,      id: "break" },
-    { time: 13,      id: "A" },
-    { time: 14,      id: "activity" },
-    { time: 14.5,    id: "B" },
-    { time: 15.5,    id: "lottery" },
+    { time: 10, id: "intro" },
+    { time: 10.5, id: "A" },
+    { time: 11, id: "activity" },
+    { time: 11.5, id: "B" },
+    { time: 12, id: "break" },
+    { time: 13, id: "A" },
+    { time: 14, id: "activity" },
+    { time: 14.5, id: "B" },
+    { time: 15.5, id: "lottery" },
     { time: 15.8334, id: "outro" },
-    { time: 16,      id: "end" }
+    { time: 16, id: "end" }
   ];
   let eventName = {
     "intro": "開幕及各組介紹",
@@ -66,7 +66,7 @@ export default function Root() {
     </div>;
   };
 
-  let [ mobile, setMobile ] = React.useState(false);
+  let [mobile, setMobile] = React.useState(false);
   React.useEffect(() => {
     setMobile(window.innerWidth < 800);
     window.addEventListener("resize", () => setMobile(window.innerWidth < 800));
@@ -110,6 +110,52 @@ export default function Root() {
             </div>
           </>}
         </div>
+      </Container>
+    </section>
+    <section className="map">
+      <Container>
+        <Row className="justify-content-center">
+          <Col md={8}>
+            <h3 className="text-center mb-5">展覽地圖</h3>
+            <Table bordered className="map-table">
+              <tbody>
+                <tr>
+                  <td colSpan={4} className="header">活動區</td>
+                </tr>
+                <tr>
+                  <td><div>第 17 組</div></td>
+                  <td><div></div></td>
+                  <td><div></div></td>
+                  <td><div></div></td>
+                </tr>
+                <tr>
+                  <td><div>第 16 組</div></td>
+                  <td><div>第 9 組</div></td>
+                  <td><div>第 8 組</div></td>
+                  <td><div>第 1 組</div></td>
+                </tr>
+                <tr>
+                  <td><div>第 15 組</div></td>
+                  <td><div>第 10 組</div></td>
+                  <td><div>第 7 組</div></td>
+                  <td><div>第 2 組</div></td>
+                </tr>
+                <tr>
+                  <td><div>第 14 組</div></td>
+                  <td><div>第 11 組</div></td>
+                  <td><div>第 6 組</div></td>
+                  <td><div>第 3 組</div></td>
+                </tr>
+                <tr>
+                  <td><div>第 13 組</div></td>
+                  <td><div>第 12 組</div></td>
+                  <td><div>第 5 組</div></td>
+                  <td><div>第 4 組</div></td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
       </Container>
     </section>
     <div style={{ height: 100 }}></div>
