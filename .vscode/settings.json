@@ -3,5 +3,6 @@
   "compile-hero.javascript-output-toggle": true,
   "compile-hero.typescript-output-toggle": true,
   "compile-hero.typescriptx-output-toggle": false,
+  "compile-hero.scss-output-toggle": false,
   "typescript.preferences.importModuleSpecifierEnding": "js"
 }

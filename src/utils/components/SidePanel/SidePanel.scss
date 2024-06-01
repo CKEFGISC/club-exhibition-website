@@ -1,0 +1,14 @@
+@import "/src/utils/Declarations.scss";
+
+.offcanvas {
+  background: #{$c-background-10};
+
+  .btn-close:focus {
+    border: none;
+    box-shadow: none;
+  }
+  
+  .nav-link {
+    color: unset;
+  }
+}

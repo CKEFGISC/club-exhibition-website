@@ -1,0 +1,157 @@
+@import "/src/utils/Declarations";
+
+$intro-shade-intensity: 60%;
+$intro-background-url: "https://www.shutterstock.com/image-vector/enchanting-anime-landscape-mistcovered-mountain-600nw-2301778699.jpg";
+
+section.intro {
+  position: relative;
+  padding: 2dvh 8dvw;
+}
+
+.intro-title {
+  font-family: "Dancing Script", "Noto Sans TC", cursive;
+  margin-top: 16dvw;
+  font-size: 10dvw;
+  text-shadow: #000 1px 0 40px;
+}
+
+.intro-subtitle {
+  margin-bottom: 48px;
+  font-size: 2.4dvw;
+  text-shadow: #000 1px 0 10px;
+}
+
+.intro-background-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -200;
+}
+
+.intro-background {
+  width: 100%;
+  height: 100dvh;
+  pointer-events: none;
+  background: linear-gradient(72deg, rgba(#aa224f, $intro-shade-intensity), rgba(#1116aa, $intro-shade-intensity)), url($intro-background-url), radial-gradient(transparent, #00000044);
+  background-blend-mode: darken;
+  background-size: cover;
+}
+
+section.about .col-md-8 {
+  > .about-image-container {
+    display: flex;
+    justify-content: center;
+
+    > img {
+      --size: 240px;
+      width: var(--size);
+      height: var(--size);
+    }
+  }
+  > * {
+    text-align: center;
+  }
+  > h2 {
+    margin-bottom: 0.8em;
+  }
+}
+
+$timeline-gap: 58px;
+$timeline-dot-size: 12px;
+
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.timeline-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: #{$timeline-gap} 0;
+
+  > h5 {
+    margin-bottom: 0;
+  }
+}
+
+.timeline-dot {
+  position: relative;
+  width: #{$timeline-dot-size};
+  height: #{$timeline-dot-size};
+  border-radius: #{$timeline-dot-size / 2};  
+  background: #ededed;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-top: $timeline-dot-size / 2;
+    width: #{$timeline-dot-size / 4};
+    height: #{$timeline-gap + $timeline-dot-size * 2};
+    background: #e5e5e5;
+  }
+}
+
+.timeline-row:last-child > .timeline-dot::before {
+  display: none;
+}
+
+.timeline-message {
+  position: relative;
+  background: #{$c-primary-15};
+  padding: 12px 36px;
+  margin: -12px 0 -12px 6px;
+  border-radius: 2px 4px 4px 2px;
+
+  // width: 186px;
+  // text-align: center;
+
+  &::before {
+    --width: 18px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(-1 * var(--width));
+    display: inline-block;
+    width: var(--width);
+    height: 48px;
+    border-right: var(--width) solid #{$c-primary-15};
+    border-top: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+  }
+}
+
+.timeline-dot-now-active-circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: #{$timeline-dot-size};
+  height: #{$timeline-dot-size};
+  border-radius: #{$timeline-dot-size / 2};  
+  background: #ed8d8d;
+  animation: diffuse 1500ms infinite;
+}
+
+@keyframes diffuse {
+  0% {
+      transform: scale(1);
+      opacity: 0.6;
+  }
+  85% {
+      transform: scale(3.5);
+      opacity: 0;
+  }
+  90% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }  
+}

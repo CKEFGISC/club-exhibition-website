@@ -1,0 +1,32 @@
+$c-primary-50: #22ccee;
+$c-primary-55: lighten($c-primary-50, 05%);
+$c-primary-60: lighten($c-primary-50, 10%);
+$c-primary-65: lighten($c-primary-50, 15%);
+$c-primary-70: lighten($c-primary-50, 20%);
+$c-primary-75: lighten($c-primary-50, 25%);
+$c-primary-80: lighten($c-primary-50, 30%);
+$c-primary-85: lighten($c-primary-50, 35%);
+$c-primary-90: lighten($c-primary-50, 40%);
+$c-primary-95: lighten($c-primary-50, 45%);
+$c-primary-XL: lighten($c-primary-50, 50%);
+$c-primary-45:  darken($c-primary-50, 05%);
+$c-primary-40:  darken($c-primary-50, 10%);
+$c-primary-35:  darken($c-primary-50, 15%);
+$c-primary-30:  darken($c-primary-50, 20%);
+$c-primary-25:  darken($c-primary-50, 25%);
+$c-primary-20:  darken($c-primary-50, 30%);
+$c-primary-15:  darken($c-primary-50, 35%);
+$c-primary-10:  darken($c-primary-50, 40%);
+$c-primary-05:  darken($c-primary-50, 45%);
+$c-primary-XS:  darken($c-primary-50, 50%);
+
+$c-background-10: #191820;
+$c-background-11: lighten($c-background-10, 1%);
+$c-background-12: lighten($c-background-10, 2%);
+$c-background-09: darken($c-background-10, 1%);
+$c-background-08: darken($c-background-10, 1%);
+
+$c-background-hover: #{$c-primary-25}22;
+$c-selection: #{$c-primary-75}44;
+$c-shadow: #00000066;
+$c-link: #{$c-primary-80};

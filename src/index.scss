@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+@import "/src/utils/Declarations";
+
+:root {
+  --bs-body-font-family: "Noto Sans TC", var(--bs-font-sans-serif);
+  --bs-body-font-weight: 300;
+}
+
+body {
+  background: #{$c-background-10};
+  // overflow-y: scroll;
+  scrollbar-width: thin;
+}
+/* Customize the appearance of the scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5); /* color of the scrollbar thumb */
+}
+
+/* Customize the appearance of the scrollbar track */
+body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1); /* color of the scrollbar track */
+}
+
+::selection {
+  background: #{$c-selection};
+}
+
+.link {
+  color: unset;
+  text-decoration: unset;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: #{$c-link};
+  }
+}
+
+section {
+  margin-bottom: 8dvw;
+}

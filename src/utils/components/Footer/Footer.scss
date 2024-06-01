@@ -1,0 +1,21 @@
+@import "/src/utils/Declarations";
+
+footer {
+  background: #{$c-background-12};
+  padding-top: 6em;
+  padding-bottom: 8em;
+
+  h5 {
+    margin-bottom: 0.4em;
+  }
+  li {
+    margin-bottom: 0.3em;
+  }
+}
+
+@media (max-width: 512px) {
+  .footer-copyright {
+    display: flex;
+    flex-direction: column;
+  }
+}

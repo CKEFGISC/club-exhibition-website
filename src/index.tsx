@@ -6,6 +6,8 @@ import { RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
+import "./index.scss";
+
 import createIndexRouter from "./router.tsx";
 
 const root = ReactDOM.createRoot(document.querySelector("#root") as HTMLDivElement);
